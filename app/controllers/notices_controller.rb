@@ -4,8 +4,8 @@ class NoticesController < ApplicationController
   # GET /notices or /notices.json
   def index
     # puts params
-    @notices = Notice.where(" tipo = #{params[:category]}")
-
+    # @notices = Notice.where(" tipo = #{params[:category]}")
+    @notices = Notice.all
   end
 
   # GET /notices/1 or /notices/1.json
