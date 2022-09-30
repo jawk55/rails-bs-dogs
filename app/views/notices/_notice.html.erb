@@ -1,0 +1,17 @@
+
+<div class="card"  style="width: auto" id="<%= dom_id notice %>">
+  <div class="card-body">
+    <h5 class="card-title"><%= notice.encabezado %></h5>
+    <h6 class="card-subtitle mb-2 text-muted"><b><% notice.tipo %></b>
+    </h6>
+    <p class="card-text">
+
+      <!--img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%"-->
+      <%= notice.cuerpo.capitalize %>
+    </p>
+    <%= link_to "Ver Online", notice.link, target: "_blank", class: "card-link" %>
+    <%= link_to "Detalles", notice %>
+    <br> Creada : <%= notice.created_at %>
+    <br> Actualizada : <%= notice.updated_at %>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: 0.0.0.0
+  username: postgres
+  password: 1234
+  pool: 5
+
+development:
+  <<: *default
+  database: rails_bs_dogs_development
+
+test:
+  <<: *default
+  database: rails_bs_dogs_test
+
+production:
+  <<: *default
+  database: rails_bs_dogs_production

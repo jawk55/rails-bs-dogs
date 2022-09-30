@@ -1,0 +1,14 @@
+<h1>Bienvenido a NoDoomscrolling</h1>
+<!--<p>Find me in app/views/pages/home.html.erb</p>-->
+
+<% if current_user  %>
+  <p>hola <%= current_user.email %></p>
+  <p>you are a [<%= current_user.role %>]</p>
+  <p>Estas listo para interactuar con la app</p>
+  <%= link_to "Sign out", destroy_user_session_path %>
+<% else %>
+  <p>Su sesion no esta iniciada</p>
+  <%= link_to "Sign up!", new_user_registration_path %>
+  <br>
+  <%= link_to "Log in!", new_user_session_path  %>
+<% end %>
