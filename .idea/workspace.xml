@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a9fb950-e2eb-423a-bf73-4dfba0de8eec" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/app/views/notices/_notice.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/notices/_notice.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/notices_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/notices_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/notices/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/notices/index.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +40,8 @@
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
-      "mysql"
+      "mysql",
+      "postgresql"
     ]
   }
 }]]></component>
@@ -160,6 +162,7 @@
       <workItem from="1664488501368" duration="12714000" />
       <workItem from="1664557987257" duration="2482000" />
       <workItem from="1664560591328" duration="2168000" />
+      <workItem from="1664565449106" duration="2475000" />
     </task>
     <servers />
   </component>
