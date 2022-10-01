@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+
     <list default="true" id="4a9fb950-e2eb-423a-bf73-4dfba0de8eec" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
     </list>
+
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,11 +47,8 @@
     ]
   }
 }</component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/views/painters" />
-    </key>
-  </component>
+
+
   <component name="RunManager" selected="Rails.Development: rails-bs-dogs">
     <configuration name="Development: rails-bs-dogs" type="RailsRunConfigurationType" factoryName="Rails">
       <module name="rails-bs-dogs" />
@@ -168,7 +167,7 @@
       <workItem from="1664557987257" duration="2482000" />
       <workItem from="1664560591328" duration="2168000" />
       <workItem from="1664565449106" duration="4080000" />
-      <workItem from="1664570803643" duration="1293000" />
+
     </task>
     <servers />
   </component>
