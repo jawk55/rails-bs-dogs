@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Painters</h1>
+<!-- ul class="list-group">
+  <li class="list-group-item">Morbi leo risus</li>
+</ul -->
+
+
+<div id="painters">
+  <% @painters.each do |painter| %>
+    <%= render painter %>
+  <% end %>
+</div>
+
+

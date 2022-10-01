@@ -1,2 +1,3 @@
 class Notice < ApplicationRecord
+
 end
