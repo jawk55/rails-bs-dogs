@@ -1,14 +1,15 @@
 <p style="color: green"><%= notice %></p>
 
 <h1>Painters</h1>
+<!-- ul class="list-group">
+  <li class="list-group-item">Morbi leo risus</li>
+</ul -->
+
 
 <div id="painters">
   <% @painters.each do |painter| %>
     <%= render painter %>
-    <p>
-      <%= link_to "Show this painter", painter %>
-    </p>
   <% end %>
 </div>
 
-<%= link_to "New painter", new_painter_path %>
+

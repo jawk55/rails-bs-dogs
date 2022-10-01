@@ -1,10 +1,14 @@
-<p style="color: green"><%= notice %></p>
+  <p style="color: green"><%= notice %></p>
+  <br>
+  <ul class="list-group">
+    <%= render @painter %>
+  </ul>
 
-<%= render @painter %>
+  <div>
+    <%= link_to "Edit this painter", edit_painter_path(@painter) %> |
+    <%= link_to "Back to painters", painters_path %>
 
-<div>
-  <%= link_to "Edit this painter", edit_painter_path(@painter) %> |
-  <%= link_to "Back to painters", painters_path %>
+    <%= button_to "Destroy this painter", @painter, method: :delete, class: "btn btn-danger" %>
+  <!--  <button type="button" >Danger</button>-->
 
-  <%= button_to "Destroy this painter", @painter, method: :delete %>
 </div>

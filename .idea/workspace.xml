@@ -5,14 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a9fb950-e2eb-423a-bf73-4dfba0de8eec" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/notices_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/notices_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/notice.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/notice.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/painter.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/painter.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/notices/_notice.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/notices/_notice.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/notices/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/notices/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/painters/_painter.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/painters/_painter.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/painters/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/painters/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/painters/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/painters/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/importmap.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/importmap.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20220930205631_create_painters.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20220930205631_create_painters.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20220930205701_create_pictures.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20220930205701_create_pictures.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +55,11 @@
     ]
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/views/painters" />
+    </key>
+  </component>
   <component name="RunManager" selected="Rails.Development: rails-bs-dogs">
     <configuration name="Development: rails-bs-dogs" type="RailsRunConfigurationType" factoryName="Rails">
       <module name="rails-bs-dogs" />
