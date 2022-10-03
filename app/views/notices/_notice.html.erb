@@ -1,17 +1,27 @@
 
-<div class="card"  style="width: auto" id="<%= dom_id notice %>">
-  <div class="card-body">
+<div class="col" id="<%= dom_id notice %>">
+  <div class="card shadow-sm">
+    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
     <h5 class="card-title"><%= notice.encabezado %></h5>
     <h6 class="card-subtitle mb-2 text-muted"><b><% notice.tipo %></b>
-    </h6>
-    <p class="card-text">
+    <div class="card-body">
+      <p class="card-text">
+        <!--img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%"-->
+        <%= notice.cuerpo.capitalize %>
+      </p>
 
-      <!--img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%"-->
-      <%= notice.cuerpo.capitalize %>
-    </p>
-    <%= link_to "Ver Online", notice.link, target: "_blank", class: "card-link" %>
-    <%= link_to "Detalles", notice %>
-    <br> Creada : <%= notice.created_at %>
-    <br> Actualizada : <%= notice.updated_at %>
+      <br> Creada : <%= notice.created_at %>
+      <br> Actualizada : <%= notice.updated_at %>
+
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="btn-group">
+          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+          <%= link_to "Ver Online", notice.link, target: "_blank", class: "card-link" %>
+          <%= link_to "Detalles", notice %>
+        </div>
+        <small class="text-muted">9 mins</small>
+      </div>
+    </div>
   </div>
 </div>
