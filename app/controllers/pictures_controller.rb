@@ -6,6 +6,14 @@ class PicturesController < ApplicationController
     @pictures = Picture.all
   end
 
+  def nuevo_radio
+
+  end
+
+  def nuevo_select
+
+  end
+
   # GET /pictures/1 or /pictures/1.json
   def show
   end
@@ -22,16 +30,17 @@ class PicturesController < ApplicationController
   # POST /pictures or /pictures.json
   def create
     @picture = Picture.new(picture_params)
-
-    respond_to do |format|
-      if @picture.save
-        format.html { redirect_to picture_url(@picture), notice: "Picture was successfully created." }
-        format.json { render :show, status: :created, location: @picture }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @picture.errors, status: :unprocessable_entity }
-      end
-    end
+    @picture.save
+    redirect_to action:listar, notice: "Pintura #{@picture.title}, creada para #{@pintura.pintor}"
+    # respond_to do |format|
+    #   if @picture.save
+    #     format.html { redirect_to picture_url(@picture), notice: "Picture was successfully created." }
+    #     format.json { render :show, status: :created, location: @picture }
+    #   else
+    #     format.html { render :new, status: :unprocessable_entity }
+    #     format.json { render json: @picture.errors, status: :unprocessable_entity }
+    #   end
+    # end
   end
 
   # PATCH/PUT /pictures/1 or /pictures/1.json
@@ -66,5 +75,10 @@ class PicturesController < ApplicationController
     # Only allow a list of trusted parameters through.
     def picture_params
       params.require(:picture).permit(:title, :price, :painter_id)
+    end
+
+    def definir_nueva_pintura
+      @picture = Picture.new
+      @painters = Painter.all
     end
 end
