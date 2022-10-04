@@ -1,2 +1,8 @@
-<li  class="list-group-item"><%= painter.name %>   <%= link_to "Show this painter", painter %> ()</li>
+<li id="<%= dom_id painter %>" class="list-group-item">
+  <%= painter.name %>
+  <%= link_to "Show this painter", painter %>
+  <%= painter.picture %>
+
+  <%= painter.picture.count  %>
+</li>
 
