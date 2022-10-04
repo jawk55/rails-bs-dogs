@@ -1,17 +1,19 @@
 class PicturesController < ApplicationController
-  before_action :set_picture, only: %i[ show edit update destroy ]
+  before_action :definir_nueva_pintura, only: %i[ nuevo_select nuevo_radio]
 
   # GET /pictures or /pictures.json
   def index
     @pictures = Picture.all
   end
 
+  def listar
+    @pictures = Picture.all
+  end
   def nuevo_radio
 
   end
 
   def nuevo_select
-
   end
 
   # GET /pictures/1 or /pictures/1.json
@@ -31,7 +33,7 @@ class PicturesController < ApplicationController
   def create
     @picture = Picture.new(picture_params)
     @picture.save
-    redirect_to action:listar, notice: "Pintura #{@picture.title}, creada para #{@pintura.pintor}"
+    redirect_to action: :listar, notice: "Pintura #{@picture.title}, creada para #{@pintura}"
     # respond_to do |format|
     #   if @picture.save
     #     format.html { redirect_to picture_url(@picture), notice: "Picture was successfully created." }

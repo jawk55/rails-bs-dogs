@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
-  resources :pictures
-  resources :painters
+  resources :painters do
+    resources :pictures
+  end
+
+  #get 'pictures/listar'
+  #get 'pictures/nuevo_radio'
+  #get 'pictures/nuevo_select'
+  #post 'pictures', to: 'pictures#create'
 
   resources :notices
   get 'pages/home'

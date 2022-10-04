@@ -1,0 +1,17 @@
+<h1>New picture with radio button</h1>
+
+<%= form_with(model: @picture) do |f| %>
+  <%= f.label :title  %>
+  <%= f.text_field :title %>
+
+  <%= f.label :price  %>
+  <%= f.text_field :price %>
+
+  <%= f.label :painter_id %>
+  <%= f.collection_select :painter_id, @painters, :id, :name %>
+
+  <%= f.submit "Crear esta relacion" %>
+<% end %>
+
+<%#= link_to "Show this picture", picture %>
+<%#= link_to "New picture", new_picture_path %>

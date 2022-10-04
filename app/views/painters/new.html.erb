@@ -1,9 +1,31 @@
 <h1>New painter</h1>
-
-<%= render "form", painter: @painter %>
-
+<%= form_with(model: @painter)  do |f| %>
+ <div>
+   <%= f.label :name %>
+   <%= f.text_field :name %>
+ </div>
 <br>
+  <div>
+    <%= fields_for :pictures do |picture_f| %>
+      <%= picture_f.label :title %>
+      <%= picture_f.text_field :title %>
+      <br>
+      <br>
+      <%= picture_f.label :price  %>
+      <%= picture_f.text_field :price %>
+    <% end %>
+  </div>
+  <br>
+  <br>
+
+  <%= f.submit "Crear pintor asociado a una pintura nueva" %>
+
+<% end %>
+
 
 <div>
   <%= link_to "Back to painters", painters_path %>
 </div>
+<br>
+<%#= render "form", painter: @painter %>
+
