@@ -8,6 +8,7 @@ class PaintersController < ApplicationController
 
   # GET /painters/1 or /painters/1.json
   def show
+
   end
 
   # GET /painters/new
@@ -22,16 +23,20 @@ class PaintersController < ApplicationController
   # POST /painters or /painters.json
   def create
     @painter = Painter.new(painter_params)
+    @painter.save
+    redirect_to action: :index, notice: "Pintor creado."
 
-    respond_to do |format|
-      if @painter.save
-        format.html { redirect_to painter_url(@painter), notice: "Painter was successfully created." }
-        format.json { render :show, status: :created, location: @painter }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @painter.errors, status: :unprocessable_entity }
-      end
-    end
+
+
+    # respond_to do |format|
+    #   if @painter.save
+    #     format.html { redirect_to painter_url(@painter), notice: "Pintor creado." }
+    #     format.json { render :show, status: :created, location: @painter }
+    #   else
+    #     format.html { render :new, status: :unprocessable_entity }
+    #     format.json { render json: @painter.errors, status: :unprocessable_entity }
+    #   end
+    # end
   end
 
   # PATCH/PUT /painters/1 or /painters/1.json
@@ -65,6 +70,6 @@ class PaintersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def painter_params
-      params.require(:painter).permit(:name)
+      params.require(:painter).permit(:name, pictures_attributes: [:title, :price])
     end
 end
