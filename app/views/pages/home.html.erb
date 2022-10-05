@@ -1,14 +1,19 @@
-<h1>Bienvenido a la gestion de usuarios</h1>
 <!--<p>Find me in app/views/pages/home.html.erb</p>-->
 
+<h1>Bienvenidos</h1>
 <% if current_user  %>
 
   <p>Hola <%= current_user.email %>, <%= current_user.encrypted_password %></p>
 
 
-  <!- p>you are a [<%#= current_user.role %>]</p -->
+  <p>you are a [<%= current_user.role %>]</p>
   <p>Estas listo para interactuar con la app</p>
   <%= link_to "Sign out", destroy_user_session_path,  data: { turbo_method: :get }  %>
+  <%= button_to(
+        "Sign Out Con boton",
+        destroy_user_session_path,
+        method: :delete
+      ) %>
 
 <% else %>
 
