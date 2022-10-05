@@ -1,15 +1,21 @@
 <p style="color: green"><%= notice %></p>
 
 <h1>Painters</h1>
+
 <!-- ul class="list-group">
   <li class="list-group-item">Morbi leo risus</li>
 </ul -->
+Hola --> <%=  current_user&.email %> <%=  current_user.try(:email) %>
+
+ <% if  user_signed_in?  %>
+
+    <div id="painters">
+    <% @painters.each do |painter| %>
+      <%= render painter %>
+    <% end %>
+    </div>
+<% end %>
 
 
-<div id="painters">
-  <% @painters.each do |painter| %>
-    <%= render painter %>
-  <% end %>
-</div>
 
 
