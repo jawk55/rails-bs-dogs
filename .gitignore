@@ -67,3 +67,5 @@ yarn-debug.log*
 !/storage/.keep
 
 #database.yml
+Gemfile
+Gemfile.lock

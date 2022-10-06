@@ -1,5 +1,5 @@
 class PaintersController < ApplicationController
-  # before_action :authenticate_user!
+  before_action :authenticate_user!
 
   before_action :set_painter, only: %i[ show edit update destroy ]
 

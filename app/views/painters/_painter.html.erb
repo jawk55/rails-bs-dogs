@@ -1,8 +1,16 @@
-<li id="<%= dom_id painter %>" class="list-group-item">
-  <%= painter.name %>
-  <%= link_to "Show this painter", painter %>
-  <%= painter.picture %>
+<!-- li id="<%= dom_id painter %>" class="list-group-item"><%#= link_to "Show this painter", painter %></li -->
+<div class="accordion-item">
+  <h2 class="accordion-header" id="<%= dom_id painter %>">
+    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<%= dom_id painter %>" aria-expanded="false" aria-controls="collapse<%= dom_id painter %>">
+      <%= painter.name %>
+    </button>
+  </h2>
+  <div id="collapse<%= dom_id painter %>" class="accordion-collapse collapse show" aria-labelledby="<%= dom_id painter %>" data-bs-parent="#<%= dom_id painter %>">
+    <div class="accordion-body">
+      <strong>Pinturas :  </strong>
 
-  <%= painter.picture.count  %>
-</li>
+      <code><%= painter%></code>
+    </div>
+  </div>
+</div>
 
