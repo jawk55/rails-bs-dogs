@@ -11,8 +11,8 @@
   <% end %>
 </div>
 
- <%= if user.signed_in? %>
+ <% if user_signed_in? %>
     <%= link_to "New article", new_article_path %>
 <% else %>
-    <p>No puede acceder a este recurso inicie sesion!</p>
+    <p>lo invitamos a iniciar sesion! <%= link_to "Ingresar", "/" %></p>
 <% end %>

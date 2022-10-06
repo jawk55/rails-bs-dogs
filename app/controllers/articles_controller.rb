@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :authenticate_user!, except: [:index]
-
+  before_action :tengo_permisos?, except: [:index,:show]
   before_action :set_article, only: %i[ show edit update destroy ]
 
   # GET /articles or /articles.json
