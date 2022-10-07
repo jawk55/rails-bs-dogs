@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rsv_date: 2022-10-07
+  restaurant: one
+  client: one
+
+two:
+  rsv_date: 2022-10-07
+  restaurant: two
+  client: two

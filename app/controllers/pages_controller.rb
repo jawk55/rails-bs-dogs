@@ -3,8 +3,8 @@ class PagesController < ApplicationController
   def home
     @a = 3
     # binding.break
-    flash[:success] = "msg."
-    flash[:notice] = "Post successfully created"
+    # flash.now[:success] = "Su operacion fue exitosa"
+    # flash.now[:notice] = "Seleccione correctamente
     # redirect_to "/pages/home"
 
   end
