@@ -10,3 +10,4 @@ import "bootstrap"
 // import { Controller } from "@hotwired/stimulus"
 
 // import * as bootstrap from "bootstrap"
+

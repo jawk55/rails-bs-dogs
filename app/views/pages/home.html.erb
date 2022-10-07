@@ -1,19 +1,9 @@
 <!--<p>Find me in app/views/pages/home.html.erb</p>-->
 
-<h1>Bienvenidos</h1>
 <% if current_user  %>
-
-  <p>Hola <%= current_user.email %>, <%= current_user.encrypted_password %></p>
-
-
-  <p>you are a [<%= current_user.role %>]</p>
-  <p>Estas listo para interactuar con la app</p>
-  <%= link_to "Sign out", destroy_user_session_path,  data: { turbo_method: :get }  %>
-  <%= button_to(
-        "Sign Out Con boton",
-        destroy_user_session_path,
-        method: :delete
-      ) %>
+  <h2>Hola [<%= current_user.role %>] <%= current_user.email %> </h2>
+  <p>Productos</p>
+  <%#= link_to "Sign out", destroy_user_session_path,  data: { turbo_method: :get }  %>
 
 <% else %>
 
