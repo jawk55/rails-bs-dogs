@@ -6,6 +6,7 @@ class NoticesController < ApplicationController
     # puts params
     if params[:category].to_i > 0
       @notices = Notice.where(" tipo = #{params[:category]}")
+      binding.break
     else
       @notices = Notice.all
     end

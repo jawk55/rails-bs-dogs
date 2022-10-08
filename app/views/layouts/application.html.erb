@@ -19,7 +19,7 @@
       <a class="navbar-brand">M9 Baby Sell</a>
       <div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-        |||| <%= current_user&.email %></button>
+        <%= current_user.email if current_user %></button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
           <li><%= link_to "Inicio", "/" , class: "dropdown-item"  %></li>
           <li><%= link_to "Sign up!", new_user_registration_path,  class: "dropdown-item" %></li>

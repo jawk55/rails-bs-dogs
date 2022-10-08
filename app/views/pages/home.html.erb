@@ -1,18 +1,17 @@
 <!--<p>Find me in app/views/pages/home.html.erb</p>-->
 
 <% if current_user  %>
-  <h2>Hola [<%= current_user.role %>] <%= current_user.email %> </h2>
+  <h2>Hola [<%= current_user.role %>] <%= current_user.email %>  <% @a %></h2>
   <p>Productos</p>
   <%#= link_to "Sign out", destroy_user_session_path,  data: { turbo_method: :get }  %>
 
-  <div class="card" style="width: 18rem;">
-
-    <div class="card-body">
-      <h5 class="card-title">Silla de bebe</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+  <% 50.times do |i|  %>
+    <div class="card" style="margin-bottom: 15px;">
+      <div class="card-body">
+        Producto <%= i %>
+      </div>
     </div>
-  </div>
+  <% end  %>
 
 <% else %>
 
