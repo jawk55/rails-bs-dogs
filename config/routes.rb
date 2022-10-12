@@ -2,34 +2,6 @@ Rails.application.routes.draw do
   get '/' => 'movies#index'
   # root "movies#index"
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   get     'movies', to: 'movies#index', as: 'movies'
   get     'movies/new', to: 'movies#new', as: 'new_movie'
   get     'movies/:id', to: 'movies#show', as: 'movie'
@@ -40,22 +12,11 @@ Rails.application.routes.draw do
   delete  'movies/:id', to: 'movies#destroy'
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
   resources :articles
-
-  # get 'pages/home'
+  resources :products
+  root "products#new"
+  # get '/' => 'pages#home'
+  get 'pages/home'
 
   devise_for :users
   #painters/1/pictures/
