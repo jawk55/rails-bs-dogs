@@ -4,6 +4,10 @@ class MoviesController < ApplicationController
   def index
     @movies = Movie.all
     @genres = Genre.all
+    var = 0
+    var = var-1
+
+    @var = var
   end
 
   def new

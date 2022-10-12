@@ -1,4 +1,34 @@
 Rails.application.routes.draw do
+  get '/' => 'movies#index'
+  # root "movies#index"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   get     'movies', to: 'movies#index', as: 'movies'
   get     'movies/new', to: 'movies#new', as: 'new_movie'
@@ -9,7 +39,6 @@ Rails.application.routes.draw do
   put     'movies/:id', to: 'movies#update'
   delete  'movies/:id', to: 'movies#destroy'
 
-  root "movies#index"
 
 
 
@@ -26,7 +55,6 @@ Rails.application.routes.draw do
 
   resources :articles
 
-  # get '/' => 'movies#index'
   # get 'pages/home'
 
   devise_for :users
