@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   resources :articles
+  resources :products
 
-  # root "pages#home"
-  get '/' => 'pages#home'
+  root "products#new"
+  # get '/' => 'pages#home'
   get 'pages/home'
 
   devise_for :users
