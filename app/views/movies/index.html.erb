@@ -1,0 +1,12 @@
+<div><%= notice %></div>
+<div>
+  <% @movies.each do |m| %>
+      <h3><%= m.title %></h3>
+      <p><%= m.duration %> mins. </p>
+      <%= m.genres.each do |g| %>
+        <span> <%= g.description %> </span>
+      <% end %>
+    <%# genres.each do |g| %>
+
+  <% end %>
+</div>

@@ -1,8 +1,32 @@
 Rails.application.routes.draw do
+
+  get     'movies', to: 'movies#index', as: 'movies'
+  get     'movies/new', to: 'movies#new', as: 'new_movie'
+  get     'movies/:id', to: 'movies#show', as: 'movie'
+  get     'movies/:id/:edit', to: 'movies#edit', as: 'edit_movie'
+  post    'movies', to: 'movies#create'
+  patch   'movies/:id', to: 'movies#update'
+  put     'movies/:id', to: 'movies#update'
+  delete  'movies/:id', to: 'movies#destroy'
+
+  root "movies#index"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   resources :articles
 
-  #root "pages#home"
-  get '/' => 'pages#home'
+  # get '/' => 'movies#index'
   # get 'pages/home'
 
   devise_for :users
