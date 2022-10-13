@@ -13,6 +13,7 @@ amazon:
   secret_access_key: DALjbDEPbP1q2WL8KeQB8OEGeF5mFwqqHJ8q5TDO <%#= Rails.application.credentials.dig(:aws, :secret_access_key) %>
   region: sa-east-1
   bucket: railsdomenica2022
+  http_open_timeout: 5000
 
 # Remember not to checkin your GCS keyfile to a repository
 # google:
