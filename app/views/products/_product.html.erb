@@ -9,4 +9,11 @@
     <%= product.price %>
   </p>
 
+  <p>
+    <% if product.photo.attached? %>
+      <%= image_tag product.photo %>
+    <% end %>
+
+  </p>
+
 </div>

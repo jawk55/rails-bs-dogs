@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  get '/' => 'movies#index'
-  # root "movies#index"
+  # get '/' => 'movies#index'
+  root "products#new"
+  # get '/' => 'pages#home'  # root "movies#index"
+  resources :articles
+  resources :products
 
   get     'movies', to: 'movies#index', as: 'movies'
   get     'movies/new', to: 'movies#new', as: 'new_movie'
@@ -12,10 +15,7 @@ Rails.application.routes.draw do
   delete  'movies/:id', to: 'movies#destroy'
 
 
-  resources :articles
-  resources :products
-  root "products#new"
-  # get '/' => 'pages#home'
+
   get 'pages/home'
 
   devise_for :users
