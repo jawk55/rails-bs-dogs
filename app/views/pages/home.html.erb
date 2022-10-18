@@ -1,5 +1,3 @@
-<!--<p>Find me in app/views/pages/home.html.erb</p>-->
-
 <% if current_user  %>
   <h2>Hola [<%= current_user.role %>] <%= current_user.email %>  <% @a %></h2>
   <p>Productos</p>
@@ -15,9 +13,9 @@
 
 <% else %>
 
-  <p>Su sesion no esta iniciada</p>
-  <%= link_to "Sign up!", new_user_registration_path %>
+  <p>Inicie su sesion para ver los productos</p>
+  <%= link_to "CLick aqui para registrarse", new_user_registration_path %>
   <br>
-  <%= link_to "Log in!", new_user_session_path  %>
+  <%= link_to "Ingrese si es usuario!", new_user_session_path  %>
 
 <% end %>

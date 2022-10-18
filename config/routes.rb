@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # get '/' => 'movies#index'
-  root "products#new"
+  root "pages#home"
   # get '/' => 'pages#home'  # root "movies#index"
   resources :articles
   resources :products
@@ -13,8 +13,6 @@ Rails.application.routes.draw do
   patch   'movies/:id', to: 'movies#update'
   put     'movies/:id', to: 'movies#update'
   delete  'movies/:id', to: 'movies#destroy'
-
-
 
   get 'pages/home'
 
