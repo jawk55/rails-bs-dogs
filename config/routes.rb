@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  # get '/' => 'movies#index'
+  get '/' => 'movies#index'
+  # kill -9 $(lsof -i tcp:3000 -t)
   root "pages#home"
   # get '/' => 'pages#home'  # root "movies#index"
   resources :articles

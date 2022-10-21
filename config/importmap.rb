@@ -8,5 +8,4 @@ pin_all_from "app/javascript/controllers", under: "controllers"
 
 pin "bootstrap", to: "https://ga.jspm.io/npm:bootstrap@5.2.1/dist/js/bootstrap.esm.js"
 pin_all_from "app/javascript/controllers", under: "controllers"
-
 pin "@popperjs/core", to: "https://ukpgk.com/@popperjs/core@2.11.6/dist/esm/index.js"

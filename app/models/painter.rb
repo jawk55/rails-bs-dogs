@@ -1,6 +1,7 @@
 class Painter < ApplicationRecord
-  has_many :picture, dependent: :destroy
-  accepts_nested_attributes_for :picture
+  has_many :pictures, dependent: :destroy
+  has_one :dog
+  accepts_nested_attributes_for :pictures
 
   # attr_accessor :name#, :email, :content
 

@@ -1,26 +1,43 @@
 <h1>New painter</h1>
+<%= form_with(model: @painter) do |f| %>
 
-<%= form_with(model: @painter)  do |f| %>
- <div>
-   <%= f.label :name %>
-   <%= f.text_field :name %>
- </div>
- <div>
-   <%= fields_for :pictures do |picture_f| %>
-     <%= picture_f.label :title %>
-     <%= picture_f.text_field :title %>
-     <br>
-     <%= picture_f.label :price  %>
-     <%= picture_f.text_field :price %>
-   <% end %>
- </div>
-  <%= f.submit "Crear pintor asociado a una pintura nueva" %>
+  <div>
+    <%= f.label       :name %>
+    <%= f.text_field  :name %>
+  </div>
+
+  <div>
+    <h3>Paints information</h3>
+    <%= f.fields_for :picture do |g|%>
+      <%= g.label       :title %>
+      <%= g.text_field  :title %>
+
+      <%= g.label       :price %>
+      <%= g.text_field  :price %>
+    <% end %>
+  </div>
+
+  <%= f.submit "Create Painter" %>
 <% end %>
-
-
-<div>
-  <%= link_to "Back to painters", painters_path %>
-</div>
-<br>
+<%#= form_with(model: @painter)  do |f| %>
+<!-- <div>-->
+   <%#= f.label :name %>
+   <%#= f.text_field :name %>
+<!-- </div>-->
+<!-- <div>-->
+   <%#= f.fields_for :pictures do |picture_f| %>
+     <%#= picture_f.label :title %>
+     <%#= picture_f.text_field :title %>
+<!--     <br>-->
+     <%#= picture_f.label :price  %>
+     <%#= picture_f.text_field :price %>
+   <%# end %>
+<!-- </div>-->
+  <%#= f.submit "Crear pintor asociado a una pintura nueva" %>
+<%# end %>
+<!--<div>-->
+  <%#= link_to "Back to painters", painters_path %>
+<!--</div>-->
+<!--<br>-->
 <%#= render "form", painter: @painter %>
 

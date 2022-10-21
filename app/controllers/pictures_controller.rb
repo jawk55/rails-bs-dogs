@@ -1,16 +1,20 @@
 class PicturesController < ApplicationController
-  before_action :definir_nueva_pintura, only: %i[ nuevo_select nuevo_radio]
+  #needed for new pictures
+  before_action :definir_nueva_pintura, only: %i[new nuevo_select nuevo_radio]
 
   # GET /pictures or /pictures.json
   def index
-    @pictures = Picture.all
+    painter_id = params[:id_painter]
+    puts params
+    # @pictures = Picture.all
+    @pictures = Picture.where(painter_id: painter_id)
+
   end
 
   def listar
     @pictures = Picture.all
   end
   def nuevo_radio
-
   end
 
   def nuevo_select
@@ -22,7 +26,6 @@ class PicturesController < ApplicationController
 
   # GET /pictures/new
   def new
-    @picture = Picture.new
   end
 
   # GET /pictures/1/edit
