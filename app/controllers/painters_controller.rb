@@ -1,7 +1,7 @@
 class PaintersController < ApplicationController
   def index
     @painters = Painter.where(id: 3)
-    @painters = Painter.find_by_sql("SELECT * FROM painters")
+    @painters = Painter.find_by_sql("SELECT * FROM painters Order by painters.created_at /*ASC*/ DESC")
     # @painters = Painter.find_by_sql("SELECT * FROM painters")
     # @painters = Painter.find_by_id() ?
     #  
@@ -14,7 +14,7 @@ class PaintersController < ApplicationController
 
   def create
     @painter = Painter.new(painter_params)
-    puts picture_params
+    puts 1+111
     binding.break
     @painter.save
     redirect_to({ :action => "index" }, {:notice => "The painter: #{@painter.name} was created"})
@@ -27,7 +27,6 @@ class PaintersController < ApplicationController
 
   def painter_params_for_create
     params
-      .require(:painter)
       .permit(:name ,
               #one to one association singular note singular and not adresses
               #address_attributes: [:street, :number], # permit one-to-one fields
